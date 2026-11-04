@@ -7,7 +7,7 @@ resources:
 images:
   - name: notes-api
     newName: localhost:5001/notes-api
-    newTag: 7289e24
+    newTag: "7289e24"
   - name: notes-ui
     newName: localhost:5001/notes-ui
-    newTag: 7289e24
+    newTag: "7289e24"
