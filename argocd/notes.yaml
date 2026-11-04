@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: notes
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/nsmnipun/cicd-lab-config.git
+    targetRevision: main
+    path: apps/notes/base
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: notes
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
